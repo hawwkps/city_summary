@@ -1,5 +1,6 @@
+from clients.exceptions import ExternalServiceError, NotFoundError
 from clients.http import get_json
-from clients.exceptions import NotFoundError, ExternalServiceError
+
 
 def get_rate(currency: str) -> float:
     url = f"https://api.frankfurter.dev/v2/rate/{currency}/RUB"

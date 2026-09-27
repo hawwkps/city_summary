@@ -1,5 +1,7 @@
 import time
+
 import requests
+
 from clients.exceptions import ExternalServiceError
 
 TIMEOUT = 2
@@ -13,7 +15,7 @@ def get_json(url: str, params: dict | None = None) -> dict:
             data = response.json()
             return data
             
-        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
 
             if attempt < MAX_ATTEMPTS:
                 time.sleep(attempt*TIMEOUT) 

@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from clients.exceptions import NotFoundError, ExternalServiceError
+from clients.exceptions import ExternalServiceError, NotFoundError
 from processing.service import build_city_summary
 
 

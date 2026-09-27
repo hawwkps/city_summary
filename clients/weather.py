@@ -1,6 +1,5 @@
-from clients.http import get_json
 from clients.exceptions import NotFoundError
-
+from clients.http import get_json
 
 WEATHER_CODES = {
 	"0": "Clear sky",
